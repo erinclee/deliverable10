@@ -1,246 +1,153 @@
-html{
-  scroll-behavior: smooth;
-}
 
-body{
-  background-color: #737373;
-  font-size: 18px;
-  line-height: 1.15;
-  margin: 0;
-  padding: 0;
-}
-
-
-.overview{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: white;
-  height: 400px;                /* Parallax effect */
-}
-
-
-.overview p{
-  color: white;
-  font-size: 24px;
-  padding: 0 100px;
-  text-align: center;
+ body {
+    background-color: #bfdabaec
+    
 }
 
 h1{
-  font-size: 50px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
+    color: #00004d;
+    text-align: center;
+    font-size: 80px;
+    font-family: "San Serif";
 }
 
 h2{
-  font-size: 32px;
-  line-height: 1.5;
+    color:  #00004d;
+    text-align: center;
+    font-size: 75px;
+    font-family: "Didot";
 }
 
-nav li{
-  display:inline;
-  padding-right:20px;
-
+h3{
+    color:  #00004d;
+    text-align: center;
+    font-size: 70px;
+    font-family: "Didot"
 }
 
-nav a{
-  color: black;
-  font-weight: bold;
-  text-decoration: none; 
+p{
+    line-height: normal;
+    font-family: "Didot";
+    text-align: center;
+    font-size:20px;
 }
 
-
-.skip a{
-  background: white;
-  left: 0;
-  padding: 6px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
-}
-
-
-nav{
-  background-color: #ddd;
-  padding: 25px 0; 
-  text-align: left;
-}
-
-footer{
-  background-color: black;
-  color: white;
-  padding-top: 30px;
-  text-align: center;
-}
-
-
-.text-block{
-  background-color: rgba(255, 255, 255, .8);
-  border: 10px solid black;
-  padding: 30px;
-}
-
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
-  }
-
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-   }
-
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
-  
-  }
-}
-
-
-
-
-/*Your Code Here*/
-/* PLEASE DO NOT REMOVE MY COMMENTS.  THEY HELP US HELP YOU DEBUG. */
-
-/* Step 1: Write selector/rule property to add an underline when
-links in the navigation are in the hover or focus state.*/
-
-a:hover {
-  text-decoration: underline;
-}
-a:focus {
-  text-decoration: underline;
-}
-
-/* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-.skip a {
-  top: -40px; 
-  position: absolute;
-}
-
-/* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-.skip a:focus{
-  top: 20px;
-}
-
-/* Step 3: Write selector/rule property to style all elements when in focus*/
-*:focus {
-  border: solid 2px green; 
-}
-
-
-/* Step 4: Write selector/rule property to style the container */
-.container {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-gap: 15px;
-}
 
 img {
-    width: 100%;
+    border: 5px solid #3b5b5e;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px;
+  }
+  
+   li{
+    font-size:20px;
+    font-family: "Didot";
+    float: none;
+    display: inline-block;
+    height: 50px;
+  } */
+    
+   nav li {
+      display: block;
+      padding: 10px;
+      background-color: #ccffdf;
+    }
+    nav{
+      background-color: #70bb63;
+      padding: 25px 0; 
+      text-align: center;
+      font-size:30px;
+      border: 2px solid black;
+  }
+
+  nav a{
+      font-size: 23px;
+      margin: auto;
+      padding: 0px;
+      margin: 0px;
+      display:block;
+  }
+
+
+  
+
+  a{
+    text-transform: uppercase;
+    border: solid black;
+  }
+
+
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  #skip{
+    text-transform: uppercase;
+  }
+
+  .Thumbnail{
+    border: 5px solid darkgray;
+    padding: 20px;
+    margin: auto;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
-/* Step 5: Write selector/rule property to add the background image to the 
-first div in the grid  and place it in the grid. */
-.container div:first-child{
-  grid-column: 1/-1;
-  background-image: url(/images/header.jpg);
-  background-attachment: fixed;    
-  background-repeat: no-repeat; 
-  background-position: center;  
-  background-size: cover;       
-  height: 500px;                
+  
+
+  .current-page {
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: #adc4c2;
 }
 
 
-/* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
- four rows in the grid. */
-
-      /*This will be a lot of rules.... but be strategic and combine seletors*/
-      .about {
-        grid-column: 2/3;
-        grid-row: 2;
-      }
-      
-      .method {
-        grid-column: 2/3;
-        grid-row: 3;
-      }
-      
-      .clients {
-        grid-column: 2/3;
-        grid-row: 4;
-      }
-      
-      .contact {
-        grid-column: 2/3;
-        grid-row: 5;
-      }
-      
-      .about-image {
-        grid-column: 1/-1;
-        grid-row: 2;
-        max-height: 600px;
-        overflow: hidden;
-      }
-      
-      .method-image {
-        grid-column: 1/-1;
-        grid-row: 3;
-        max-height: 600px;
-        overflow: hidden;
-      }
-      
-      .clients-image {
-        grid-column: 1/-1;
-        grid-row: 4;
-        max-height: 600px;
-        overflow: hidden;
-      }
-      
-      .contact-image {
-        grid-column: 1/-1;
-        grid-row: 5;
-        max-height: 600px;
-        overflow: hidden;
-      }
-      
- /* Step 8: Write the selector/rule property to style the .text-block class. */
-
- .text-block {
+.image-grid {
   display: grid;
-  margin: auto;
-  max-height: 250px;
-  overflow: scroll; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
 }
-/* Add your media query here */
-@media screen and (min-width: 800px) {
+.image-item {
+  text-align: center;
+  transition: transform 0.2s;
+}
 
-  /* Step 9: Write the selector/rule property to style the nav element */
-  nav {
-    text-align: right;
-    padding: 30px 0px;
+.image-item:hover {
+  transform: scale(1.05);
+}
+
+
+@media screen and (min-width: 300px) {
+    
+  .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin:0px;
+      padding:0px;
   }
 
- 
-  /* Step 10: Write the selector/rule property to update the .container class */
 
-  .container {
-    display: grid;
-    grid-template-columns: 50px auto 500px auto 50px;
+  @keyframes nav-animation {
+    from {background-color: #01c4569d;}
+    to {background-color: rgba(149, 217, 66, 0.382);}
   }
 
-  /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
+  .nav-animation,
+nav {
+    animation: nav-animation 3s infinite;
+    animation-direction: alternate;
+    background-color: #01c4119c;
+}
 
-  .about, .clients, .method-image, .contact-image {
-    grid-column: 3 / span 2;
-  }
-
-  .method, .contact, .about-image, .clients-image {
-    grid-column: 2 / span 2;
+  @media (prefers-reduced-motion: reduce) {
+    .nav-animation {animation: none;}
   }
 }
